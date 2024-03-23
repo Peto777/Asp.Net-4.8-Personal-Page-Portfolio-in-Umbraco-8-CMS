@@ -1,0 +1,343 @@
+﻿h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p, div {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+p.medium {
+    font-size: 26px;
+}
+
+p.big {
+    font-size: 32px;
+}
+
+a {
+    color: #14587F;
+    text-decoration: underline;
+}
+a:hover {
+    color: #003973;
+    text-decoration: underline;
+}
+h1, h2, h3 {
+    color: #14587F;
+    font-weight: bold;
+}
+
+/* Header */
+/*.header .top-bar {
+    padding-top: 0;
+}*/
+
+/* Header menu */
+/*.navbar {
+    border-radius: 0;
+    min-height: 0;
+    margin-bottom: 0;
+}
+.navbar-default .navbar-nav {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.navbar-default .navbar-nav > li {
+    padding: 0;
+}
+.navbar-default .navbar-nav > li > a {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #14587F;
+    text-decoration: none;
+    padding: 10px;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #003973;
+    text-decoration: none;
+}
+.navbar-default .navbar-nav > li > a:active, .navbar-default .navbar-nav > li > a:focus {
+    color: #003973;
+    text-decoration: none;
+}*/
+@media (max-width: 1010px) {
+    .navbar-header {
+        display: none !important;
+    }
+}
+@media (max-width: 1010px) {
+    .navbar-header {
+        display: block !important;
+    }
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background-color: #f5f5f5;
+}
+.footer .headline {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.footer-menu {
+    margin-top: 30px;
+    text-align: center;
+}
+.footer-menu a {
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+.footer .contact a {
+    color: #333;
+}
+.footer .contact a:hover {
+    color: #00947e;
+}
+.footer .rounded-icon {
+    background-color: #d5d5d5;
+    padding: 5px;
+    border-radius: 50%;
+}
+.footer .square-icon {
+    background-color: #d5d5d5;
+    padding: 5px;
+}
+.footer a.square-icon {
+    color: #333;
+    text-decoration: none;
+}
+.footer a.square-icon:hover {
+    color: #00947e;
+    text-decoration: none;
+}
+.footer p.contact {
+    line-height: 40px;
+}
+.footer .copyright {
+    text-align: center;
+    color: #333;
+    padding-top: 30px;
+}
+.footer .copyright a {
+    color: #333;
+    text-decoration: none;
+}
+.footer .developer {
+    text-align: center;
+    color: #333;
+    font-size: 12px;
+}
+.footer .developer a {
+    color: #333;
+    text-decoration: none;
+}
+.footer .developer a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Body */
+.page-body {
+    margin: 40px 0 0 0;
+}
+
+/* Message div */
+.message-div {
+    padding: 0;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.message-div h1 {
+    letter-spacing: -2px;
+    color: #000;
+}
+.message-div p {
+    margin: auto;
+    padding-top: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.message-div p em {
+    font-weight: normal;
+}
+.message-error h1, .message-error p {
+    color: red;
+}
+.message-div .underline {
+    text-decoration: underline;
+}
+.message-div .fa-spinner {
+    font-size: 32px;
+}
+
+/* Errors */
+.field-validation-error {
+    color: #FF0000;
+    display: block;
+}
+.validation-summary-errors {
+    color: #FF0000;
+}
+.validation-summary-errors ul, .validation-summary-errors ul li {
+    list-style: none;
+    padding: 0;
+}
+
+/* Buttons */
+.btn.btn-primary {
+    color: #fff;
+    background-color: #14587F;
+    border-color: #14587F;
+    text-shadow: none;
+    border-radius: 3px;
+}
+.btn.btn-primary:hover {
+    color: #fff;
+    background-color: #003973;
+    border-color: #003973;
+}
+.btn.btn-default {
+    color: #14587F;
+    background-color: transparent;
+    border-color: #14587F;
+    text-shadow: none;
+    border-radius: 3px;
+}
+.btn.btn-default:hover {
+    color: #003973;
+    border-color: #003973;
+}
+
+/* Menu */
+/*@media(max-width: 767px) {
+    .open > .dropdown-menu.desktop-only {
+        display: none;
+    }
+
+    .navbar-nav li.desktop-only {
+        display: none;
+    }
+}
+
+@media(min-width: 768px) {
+    .navbar-nav li.mobile-only {
+        display: none;
+    }
+}
+.navbar-default .navbar-nav > li > a {
+    padding: 10px 20px;
+}
+.navbar-default .navbar-nav > li > a:hover {
+    background-color: #f5f5f5;
+}*/
+
+
+
+/* Mobile submenu */
+/*.mobile-submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.mobile-submenu li {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+}
+.mobile-submenu li a {
+    text-decoration: none;
+    padding: 5px 20px;
+}
+.nav > li > a.mobile-submenu-caret {
+    position: absolute;
+    width: 50px;
+    right: 10px;
+    top: 0;
+    z-index: 100;
+}
+@media(min-width: 768px) {
+    .nav > li > a.mobile-submenu-caret {
+        display: none;
+    }
+}*/
+
+/* Top banner */
+.top-banner {
+    padding: 100px 0;
+    background-position-x:center;
+    background-position-y:center;
+    background-size: cover;
+}
+.top-banner h1 {
+    display: inline-block;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #14587F;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+/* Product description */
+.product-description {
+    padding: 50px 0;
+}
+.product-description p {
+    text-align: justify;
+}
+.product-description table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.product-description table td {
+    border: 1px solid #f0f0f0;
+    padding: 5px;
+}
+
+/* Product item */
+.product-item {
+    padding: 0;
+    margin: 20px 10px;
+    border: 1px solid #f5f5f5;
+}
+.product-item:hover {
+    padding: 0;
+    margin: 16px 6px;
+    border: 3px solid #14587F;
+}
+.product-item .product-title {
+    padding: 10px;
+    background-color: #14587F;
+    color: #fff;
+}
+.product-item .product-img img {
+    max-width: 100%;
+}
+
+/* Image */
+img.img-responsive {
+    max-width: 100%;
+}
+
+/* Text */
+.par-justify p, p.par-justify {
+    text-align: justify;
+}

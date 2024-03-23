@@ -1,0 +1,16 @@
+﻿@inherits UmbracoViewPage
+<!DOCTYPE html>
+<html lang="sk">
+@Html.Partial("Layout/_HtmlHead")
+<body>
+    @Html.Partial("Layout/_Header")
+    <div class="page-body">
+        @RenderBody()
+    </div>
+    <div>
+        @Html.Partial("Layout/_Footer")
+        @Html.Partial("Layout/_Cookies")
+        @Html.Partial("Layout/_HtmlScripts")
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿@inherits UmbracoViewPage
+@using PeterGlozikUmbracoOsobnaStranka.lib.Models.UmbracoCmsContent
+@using PeterGlozikUmbracoOsobnaStranka.lib.Repositories.UmbracoCmsContent
+@{ 
+    Text textyPrePatu = TextRepository.GetFromUmbraco(Umbraco);
+}
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-text-section">
+            <p>KONTAKT</p>
+            <p>
+                <a href="tel:@textyPrePatu.OsobnaStrankaTelefon">@textyPrePatu.OsobnaStrankaTelefon</a>
+                <br />
+                <a href="mailto:@textyPrePatu.OsobnaStrankaEmail">@textyPrePatu.OsobnaStrankaEmail</a>
+            </p>
+        </div>
+        <div class="copyright">
+            <div class="socials">
+                <a href="https://www.facebook.com/profile.php?id=61557529204426" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/peto7724/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/gloziksoft/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UC3E2HG-oAKHp6XQ0CP6ZtEg" target="_blank" title="YoutTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://github.com/Peto777" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <div>
+                <a href="@Url.Content("~/umbraco")">Osobná stránka</a>
+            </div>
+            <div>
+                &copy; 2022 - @DateTime.Today.Year.ToString() Všetky práva na obsah vyhradené
+            </div>
+        </div>
+    </div>
+    <a href="#" class="scrollToTop" title="Scroll to Top"><i class="fa fa-arrow-circle-up fa-2x"></i></a>
+</footer>

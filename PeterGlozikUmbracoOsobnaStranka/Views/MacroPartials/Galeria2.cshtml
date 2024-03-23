@@ -1,0 +1,54 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+    int imgCount = 0;
+}
+
+<script src="@Url.Content("~/Scripts/jquery.lazy.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/lightslider.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/lightgallery.min.js")" type="text/javascript"></script>
+
+<div class="photo-slider">
+    <div class="photo-slider-toolbar">
+        <div class="photo-slider-count"></div>
+    </div>
+    <ul id="lightSlider">
+        @foreach (var img in Umbraco.Media(Udi.Parse(Model.MacroParameters["adresarPreObrasky"].ToString())).Children)
+        {
+            imgCount++;
+            <li class="item-ls" data-thumb="@img.Url()" data-src="@img.Url()">
+                <img class="img-ls-responsive" src="@img.Url()" alt="@Path.GetFileNameWithoutExtension(img.Name)" />
+            </li>
+        }
+    </ul>
+</div>
+
+
+<script>
+    var sliderObject = null;
+    $(document).ready(function () {
+        //$('img.lazy').lazy({ visibleOnly: true, bind: 'event' });
+
+            $('#lightSlider').lightSlider({
+                gallery: true,
+                item: 1,
+                loop: false,
+                keyPress: true,
+                thumbItem: @imgCount,
+                slideMargin: 0,
+                enableDrag: false,
+                currentPagerPosition: 'left',
+                onSliderLoad: function (el) {
+                    //el.lightGallery({
+                    //    selector: '#lightSlider .lslide'
+                    //});
+                    sliderObject = el;
+                    $('.photo-slider-count').html(el.getCurrentSlideCount() + "/" + el.getTotalSlideCount());
+                    sliderObject.goToSlide(slideNum);
+                },
+                onAfterSlide: function (el, scene) {
+                    $('.photo-slider-count').html(el.getCurrentSlideCount() + "/" + el.getTotalSlideCount());
+                }
+            });
+    });
+</script>

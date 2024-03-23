@@ -1,0 +1,54 @@
+﻿@inherits UmbracoViewPage
+@using PeterGlozikUmbracoOsobnaStranka.lib.Repositories
+@using PeterGlozikUmbracoOsobnaStranka.lib.Models
+@using PeterGlozikUmbracoOsobnaStranka.lib
+@{
+    Layout = null;
+    var home = Model.Root();
+    string protokol = new PeterGlozikUmbracoOsobnaStranka.lib.Controllers._BaseControllerUtil().CurrentRequest.Url.Scheme;
+    string prefix = string.Format("{0}://www.gloziksoft.sk", protokol);
+    List<string> urls = GenerateUrls(prefix, home);
+}
+
+<?xml version="1.0" encoding="utf-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    @foreach (var url in urls)
+    {
+        <url><loc>@url</loc></url>
+    }
+</urlset>
+
+@functions {
+    List<string> GenerateUrls(string prefix, IPublishedContent mainPage)
+    {
+        List<string> urls = new List<string>();
+        GenerateUrlsRecursive(prefix, mainPage, urls);
+        return urls;
+    }
+
+    void GenerateUrlsRecursive(string prefix, IPublishedContent mainPage, List<string> urls)
+    {
+        urls.Add(string.Format("{0}{1}", prefix, mainPage.Url().TrimEnd('/')));
+        foreach (var page in mainPage.Children)
+        {
+            if (page.IsDocumentType("siteMap"))
+            {
+                continue;
+            }
+            if (page.IsDocumentType("bannerItem"))
+            {
+                continue;
+            }
+            if (page.IsDocumentType("umbracoNaviHide"))
+            {
+                continue;
+            }
+            if (page.IsDocumentType("texty"))
+            {
+                continue;
+            }
+
+            GenerateUrlsRecursive(prefix, page, urls);
+        }
+    }
+}

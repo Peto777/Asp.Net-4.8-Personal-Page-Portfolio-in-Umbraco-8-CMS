@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    string videoUrl = Umbraco.Media(Udi.Parse(Model.MacroParameters["localVideoMedia"].ToString())).Url();
+}
+
+
+
+<div class="course-video-container">
+    <video src="@videoUrl" controls></video>
+</div>

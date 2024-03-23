@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    string playerUrl = string.Format("https://www.youtube.com/embed/{0}", Model.MacroParameters["youTubeVideoId"]);
+}
+
+
+<div class="course-video-container">
+    <iframe src="@playerUrl" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>

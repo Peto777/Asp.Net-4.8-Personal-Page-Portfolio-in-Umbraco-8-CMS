@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{ 
+    int imgNB = 1;
+}
+
+<div class="row">
+    @foreach (var img in Umbraco.Media(Udi.Parse(Model.MacroParameters["adresarPreObrasky"].ToString())).Children)
+    {
+        <div class="col-md-6">
+            <br />
+            @if (imgNB < 5)
+            {
+                <img class="img-responsive" src="@img.Url() " />
+            }
+            else
+            {
+                <img class="img-responsive lazy" src="" data-src="@img.Url() " />
+            }
+        </div>
+        imgNB++;
+}
+</div>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{EMAIL_SUBJ}</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, Sans Serif;
+            color: #232323;
+            font-size: 14px;
+        }
+
+        a:link, a:visited, a:active {
+            color: #232323;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #726539;
+            text-decoration: underline;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: #726539;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        hr {
+            color: #726539;
+            background-color: #726539;
+            border: 1px solid #726539;
+        }
+    </style>
+</head>
+<body>
+    <div style="height: 30px; width: 100%; border-top:1px solid #726539; background-color: transparent">
+        &nbsp;
+    </div>
+    <div style="padding: 20px">
+        {EMAIL_MSG}
+    </div>
+    <div style="height: 10px; width: 100%; border-bottom:1px solid #726539; background-color: transparent">
+        &nbsp;
+    </div>
+    <div style="color: #726539; padding: 10px; text-align: center; font-size: 12px">
+        <em>
+            Tento e-mail Vám bol zaslaný na základe registrácie Vašej e-mailovej adresy na stránkach <a href="https://www.gloziksoft.sk" target="_blank" style="color: #726539"></a>.
+            <br />
+            Váš e-mail: <a href="mailto://{EMAIL_TO}" style="color: #726539">{EMAIL_TO}</a>
+        </em>
+    </div>
+</body>
+</html>

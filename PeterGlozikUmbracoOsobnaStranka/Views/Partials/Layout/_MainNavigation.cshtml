@@ -1,0 +1,34 @@
+﻿@inherits UmbracoViewPage
+@{
+    var home = Model.Root();
+}
+
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="@home.Url()">@home.Value("menuTitle")</a></li>
+    @foreach (var childPage in home.Children)
+    {
+        if (childPage.IsDocumentType("text"))
+        {
+            continue;
+        }
+        if (childPage.IsDocumentType("bannerItem"))
+        {
+            continue;
+        }
+
+        bool naviHide = childPage.HasValue("umbracoNaviHide") && (bool)childPage.Value("umbracoNaviHide");
+        if (!naviHide)
+        {
+            string childUrl = childPage.Url();
+            string menuTitle = childPage.HasValue("menuTitle") ? childPage.Value("menuTitle").ToString() : string.Empty;
+
+            if (!string.IsNullOrWhiteSpace(childUrl) && !string.IsNullOrWhiteSpace(menuTitle))
+            {
+                <li><a href="@childUrl">@menuTitle</a></li>
+            }
+        }
+    }
+    <li class="navbar-divider"></li>
+    <li><a href="/sk">SK</a></li>
+    <li><a href="/en">EN</a></li>
+</ul>

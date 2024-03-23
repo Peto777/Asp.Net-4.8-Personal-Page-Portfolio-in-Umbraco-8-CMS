@@ -1,0 +1,119 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using PeterGlozikUmbracoOsobnaStranka.lib.Models.UmbracoCmsContent;
+@{
+    int imgCnt = 0;
+}
+
+<script src="@Url.Content("~/Scripts/lightslider.min.js?ver=20170224")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/lightgallery.min.js?ver=20170223")" type="text/javascript"></script>
+
+<div class="gallery-list">
+    <div class="container">
+        @foreach (var child in Model.Content.Children)
+        {
+            if (!child.IsDocumentType("polozkaPreGaleriu"))
+            {
+                continue;
+            }
+            PolozkaPreGaleriu gallery = new PolozkaPreGaleriu(child);
+            <div class="gallery-folder">
+                <h2>@gallery.GaleriaNazov</h2>
+                <div class="row">
+                    @foreach (var img in gallery.GaleriaAdresar.Children)
+                    {
+                        <div class="col-md-4">
+                            <div class="gallery-img">
+                                @DrawImage(img, imgCnt, imgCnt > 15)
+                            </div>
+                        </div>
+                        imgCnt++;
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="photo-slider">
+    <div class="photo-slider-toolbar">
+        <div class="photo-slider-count"></div>
+        <div class="photo-slider-close">x</div>
+    </div>
+    <ul id="lightSlider">
+        @foreach (var child in Model.Content.Children)
+        {
+            if (!child.IsDocumentType("polozkaPreGaleriu"))
+            {
+                continue;
+            }
+            PolozkaPreGaleriu gallery = new PolozkaPreGaleriu(child);
+            foreach (var img in gallery.GaleriaAdresar.Children)
+            {
+                <li class="item-ls" data-thumb="@img.Url()" data-src="@img.Url()">
+                    <img class="img-ls-responsive" src="@img.Url()" alt="@Path.GetFileNameWithoutExtension(img.Name)" />
+                </li>
+            }
+        }
+    </ul>
+</div>
+
+
+
+<script>
+    var sliderObject = null;
+    $(document).ready(function () {
+        $('img.lazy').lazy({ visibleOnly: true, bind: 'event' });
+
+        $('.photo-slider').hide();
+        $('.photo-gallery-item-hover').click(function () {
+            var slideNum = parseInt($(this).data('idx'));
+
+            $('.page-header').hide();
+            $('.gallery-list').hide();
+            $('.photo-slider').show();
+            $('#lightSlider').lightSlider({
+                gallery: true,
+                item: 1,
+                loop: false,
+                keyPress: true,
+                thumbItem: @imgCnt,
+                slideMargin: 0,
+                enableDrag: false,
+                currentPagerPosition: 'left',
+                onSliderLoad: function (el) {
+                    //el.lightGallery({
+                    //    selector: '#lightSlider .lslide'
+                    //});
+                    sliderObject = el;
+                    $('.photo-slider-count').html(el.getCurrentSlideCount() + "/" + el.getTotalSlideCount());
+                    sliderObject.goToSlide(slideNum);
+                },
+                onAfterSlide: function (el, scene) {
+                    $('.photo-slider-count').html(el.getCurrentSlideCount() + "/" + el.getTotalSlideCount());
+                }
+            });
+            $('html, body').scrollTop(0);
+        });
+        $('.photo-slider-close').click(function () {
+            sliderObject.destroy();
+            $('.page-header').show();
+            $('.gallery-list').show();
+            $('.photo-slider').hide();
+        });
+    });
+</script>
+
+
+@functions
+{
+    MvcHtmlString DrawImage(IPublishedContent img, int idx, bool lazyLoad)
+    {
+        return MvcHtmlString.Create(
+            string.Format("<div class='photo-gallery-item' data-idx='{0}'><img class='{1}' {2}='{3}' alt='{4}' /><div class='photo-gallery-item-hover' data-idx='{0}'><i class='fas fa-search'></i></div></div>",
+            idx,
+            lazyLoad ? "lazy" : "",
+            lazyLoad ? "data-src" : "src",
+            img.Url(), Path.GetFileNameWithoutExtension(img.Name)));
+    }
+}
+

@@ -1,0 +1,89 @@
+﻿@inherits _OsobnaStrankaViewPage
+@using PeterGlozikUmbracoOsobnaStranka.lib.Models
+@using PeterGlozikUmbracoOsobnaStranka.lib.Repositories
+@using PeterGlozikUmbracoOsobnaStranka.lib.Util
+@{
+    MembershipUser user = Umbraco.MemberIsLoggedOn() ? System.Web.Security.Membership.GetUser() : null;
+    bool addSeparator = false;
+}
+
+@if (user != null)
+{
+    <div class="protected-menubar">
+        <nav class="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-protected" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="title">@user.UserName</div>
+        </nav>
+        <div id="navbar-protected" class="collapse navbar-collapse">
+            <div class="menu">
+                @if (System.Web.Security.Roles.IsUserInRole(user.UserName, OsobnaStrankaMemberRepository.OsobnaStrankaMemberAdminRole))
+                {
+                    <ul class="admin-menu">
+                        <li><a href="#more-settings" data-toggle="collapse">Nastavenia</a></li>
+                    </ul>
+                    <div id="more-settings" class="collapse more-settings">
+                        <ul class="admin-menu">
+                            <li><a href="@Url.Content("~/umbraco")">Správa obsahu webu</a></li>
+                        </ul>
+                        <div class="separator"></div>
+                        <ul class="admin-menu">
+                            <li><a href="@Url.Content("~/moj-ucet/nastavenia")">Nastavenia</a></li>
+                            <li><a href="@Url.Content("~/moj-ucet/krajiny")">Krajiny</a></li>
+                            <li><a href="@Url.Content("~/moj-ucet/sposoby-dopravy")">Spôsoby dopravy</a></li>
+                            <li><a href="@Url.Content("~/moj-ucet/sposoby-platby")">Spôsoby platby</a></li>
+                            <li><a href="@Url.Content("~/moj-ucet/stavy-objednavky")">Stavy objednávky</a></li>
+                            <li><a href="@Url.Content("~/moj-ucet/stavy-uhrady")">Stavy úhrady</a></li>
+                        </ul>
+                        <div class="separator"></div>
+                        <ul class="admin-menu">
+                            <li><a href="@Url.Content("~/moj-ucet/dostupnost-produktov")">Dostupnosť produktov</a></li>
+                            <li><a href="@Url.Content("~/moj-ucet/vlastnosti-produktov")">Vlastnosti produktov</a></li>
+                        </ul>
+                        <div class="separator"></div>
+                        <ul class="admin-menu">
+                            <li><a href="@Url.Content("~/moj-ucet/uzivatelia")">Užívatelia</a></li>
+                            <li><a href="@Url.Content("~/moj-ucet/zakaznici")">Zákazníci</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="separator"></div>
+                    <ul class="admin-menu">
+                        <li><a href="@Url.Content("~/moj-ucet/vyrobcovia")">Výrobcovia</a></li>
+                        <li><a href="@Url.Content("~/moj-ucet/produkty")">Produkty</a></li>
+                        <li><a href="@Url.Content("~/moj-ucet/kategorie")">Kategórie</a></li>
+                    </ul>
+                    <div class="separator"></div>
+                    <ul class="admin-menu">
+                        <li><a href="@Url.Content("~/moj-ucet/objednavky")">Objednávky</a></li>
+                    </ul>
+                    addSeparator = true;
+                }
+                @if (System.Web.Security.Roles.IsUserInRole(user.UserName, OsobnaStrankaMemberRepository.OsobnaStrankaMemberCustomerRole))
+                {
+                    if (addSeparator)
+                    {
+                        <div class="separator"></div>
+                    }
+                    <ul class="customer-menu">
+                        <li><a href="@Url.Content("~/sk/clenska-sekcia/zmena-hesla")">Zmena hesla</a></li>
+                        <li><a href="@Url.Content("~/moj-ucet/moje-osobne-udaje")">Moje osobné údaje</a></li>
+                        <li><a href="@Url.Content("~/moj-ucet/moje-objednavky")">Moje objednávky</a></li>
+                    </ul>
+                }
+
+            </div>
+            @using (Html.BeginUmbracoForm<PeterGlozikUmbracoOsobnaStranka.lib.Controllers.MemberController>("SubmitLogout", null, new { @class = "form-horizontal", role = "form" }))
+            {
+                <div class="logout-btn">
+                    <a href="@Url.Action("Logout" , "Member", new { area = "OsobnaStranka" })" class="btn btn-primary btn-lg">@CurrentLang.GetText("Views/Login", "ODHLÁSIŤ")</a>
+                    <input type="submit" id="submitProtectedLogoutButton" class="hidden" />
+                </div>
+            }
+        </div>
+    </div>
+}

@@ -1,0 +1,32 @@
+﻿@model LoginModel
+@using PeterGlozikUmbracoOsobnaStranka.lib.Models
+@using PeterGlozikUmbracoOsobnaStranka.lib.Util
+
+<div class="login-form">
+    @using (Html.BeginUmbracoForm<PeterGlozikUmbracoOsobnaStranka.lib.Controllers.MemberController>("SubmitLogin", null, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="umbracoosobnastranka-form">
+            <div class="form-item">
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = CurrentLang.GetText("Views/Login", "Váš e-mail") })
+                @Html.ValidationMessageFor(m => m.Username)
+            </div>
+
+            <div class="form-item">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = CurrentLang.GetText("Views/Login", "Vaše heslo") })
+                @Html.ValidationMessageFor(m => m.Password)
+                <br />
+                <a class="text-left" href="@Url.Content(CurrentLang.GetText("Views/Login", "~/sk/nova-registracia"))">@PeterGlozikUmbracoOsobnaStranka.lib.Util.CurrentLang.GetText("Views/Login", "Registrácia")</a>
+                <p class="text-right"><a class="text-left" href="@Url.Content(CurrentLang.GetText("Views/Login", "~/sk/clenska-sekcia-zabudnute-heslo"))">@PeterGlozikUmbracoOsobnaStranka.lib.Util.CurrentLang.GetText("Views/Login", "Zabudnuté heslo?")</a></p>
+            </div>
+
+            @Html.ValidationSummary(true)
+            <div class="form-section">
+                <a href="#" onclick="document.getElementById('submitButton').click(); return false;" class="btn btn-primary btn-lg"><i class="fas fa-lock"></i> @CurrentLang.GetText("Views/Login", "Prihlásiť")</a>
+                <input type="submit" id="submitButton" class="hidden" />
+            </div>
+        </div>
+    }
+</div>

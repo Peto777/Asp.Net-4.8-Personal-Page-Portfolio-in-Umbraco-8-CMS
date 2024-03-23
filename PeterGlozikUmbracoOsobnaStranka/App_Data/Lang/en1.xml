@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en" intName="English" localName="English" culture="en-US">
+	<area alias="URL">
+		<key alias="~/">~/en</key>
+		<key alias="~/kosik">~/en-cart</key>
+		<key alias="~/kosik/platba-kartou">~/en-cart/payment-card</key>
+		<key alias="~/o-takfajn/ochrana-osobnych-udajov">~/en-about/privacy-policy</key>
+		<key alias="~/o-takfajn/obchodne-podmienky">~/en-about/terms-and-conditions</key>
+	</area>
+
+
+	<area alias="Views/_Footer">
+		<key alias="PROGRAMOVANIE">PROGRAMMING</key>
+	</area>
+	<area alias="Views/_Layout">
+		<key alias="sk">en</key>
+	</area>
+	<area alias="Views/_HtmlHead">
+		<key alias="sk">en</key>
+	</area>
+	<area alias="Views/_Header">
+		<key alias="Vyhľadávanie">Search</key>
+		<key alias="Nákupný košík">Shopping Cart</key>
+		<key alias="Vyhľadať produkt">Search for a product</key>
+		<key alias="Vyhľadať">Search</key>
+	</area>
+	<area alias="Views/_InfoMessages">
+		<key alias="PRIDANÉ DO KOŠÍKA">ADDED TO CART</key>
+		<key alias="POKRAČUJEM V NAKUPOVANÍ">CONTINUE SHOPPING</key>
+		<key alias="DO POKLADNE">TO CHECKOUT</key>
+	</area>
+	<area alias="App_Plugins/CategoryPublic/GetCategoriesPromoted">
+		<key alias="Žiadne kategórie na zobrazenie.">No categories to display.</key>
+	</area>
+	<area alias="App_Plugins/CategoryPublic/CategoryDetail">
+		<key alias="Kategória nenájdená">Category not found</key>
+		<key alias="Požadovaná produktová kategória sa v ponuke nášho e-shopu nenachádza.">The requested product category is not available in our e-shop.</key>
+	</area>
+	<area alias="App_Plugins/CategoryPublic/CategoryDetailHeader">
+		<key alias="Všetky produkty">All products</key>
+	</area>
+	<area alias="App_Plugins/CategoryPublic/CategoryDetailProducts">
+		<key alias="Žiadne produkty na zobrazenie.">No products to display.</key>
+	</area>
+	<area alias="App_Plugins/ProductPublic/ProductDetail">
+		<key alias="Produkt nenájdený">Product not found</key>
+		<key alias="Požadovaný produkt sa v ponuke nášho e-shopu nenachádza.">The requested product is not available in our e-shop.</key>
+		<key alias="Všetky produkty">All products</key>
+		<key alias="NOVINKA">NEW</key>
+		<key alias="VÝPREDAJ">SALE</key>
+		<key alias="ZĽAVA">DISCOUNT</key>
+		<key alias="KÓD PRODUKTU:">PRODUCT CODE:</key>
+		<key alias="VYBERTE VEĽKOSŤ:">SELECT SIZE:</key>
+		<key alias="Veľkosť">Size</key>
+		<key alias="AKÚ VEĽKOSŤ ?">WHAT SIZE ?</key>
+		<key alias="ZADAJTE MNOŽSTVO:">ENTER QUANTITY:</key>
+		<key alias="Pridať do košíka">Add to cart</key>
+		<key alias="DO KOŠÍKA">TO CART</key>
+		<key alias="DORUČENIE DO 1-2 PRACOVNÝCH DNÍ">DELIVERY IN 1-2 WORKING DAYS</key>
+		<key alias="DOPRAVA ZDARMA NAD {0}">FREE SHIPPING OVER {0}</key>
+		<key alias="GARANCIA VRÁTENIA DO 14 DNÍ">14-DAY RETURN GUARANTEE</key>
+		<key alias="O PRODUKTE">ABOUT THE PRODUCT</key>
+	</area>
+	<area alias="App_Plugins/ProductPublic/ProductSizeTable">
+		<key alias="VEĽKOSŤ A ROZMERY">SIZE AND DIMENSIONS</key>
+	</area>
+	<area alias="App_Plugins/ProductPublic/ProductDetailRelatedProducts">
+		<key alias="MOHLO BY SA VÁM PÁČIŤ">YOU MIGHT LIKE</key>
+	</area>
+	<area alias="App_Plugins/Shared/CategoryPublic/CategoryDetailMenu">
+		<key alias="TRIEDIŤ PODĽA:">SORT BY:</key>
+		<key alias="FILTROVAŤ">FILTER</key>
+		<key alias="FILTROVANIE KATEGÓRIE">CATEGORY FILTERING</key>
+		<key alias="FARBY">COLORS</key>
+		<key alias="VEĽKOSTI">SIZES</key>
+		<key alias="CHARAKTERISTIKA">FEATURE</key>
+	</area>
+	<area alias="App_Plugins/Shared/ProductPublic/ProductItem_Img">
+		<key alias="NOVINKA">NEW</key>
+		<key alias="VÝPREDAJ">SALE</key>
+		<key alias="ZĽAVA">DISCOUNT</key>
+	</area>
+	<area alias="App_Plugins/Quote/Basket">
+		<key alias="KOŠÍK">CART</key>
+		<key alias="Objednávku sa nepodarilo odoslať. Prosím opravte chyby a skúste to znovu.">The order could not be sent. Please correct the errors and try again.</key>
+		<key alias="MÁTE ZĽAVOVÝ KUPÓN?">DO YOU HAVE A DISCOUNT COUPON?</key>
+		<key alias="Kód zľavového kupónu">Discount coupon code</key>
+		<key alias="UPLATNIŤ ZĽAVU">APPLY DISCOUNT</key>
+		<key alias="DORUČENIE 1 - 2 DNI">DELIVERY 1 - 2 DAYS</key>
+		<key alias="Odstrániť z košíka">Remove from cart</key>
+		<key alias="ZVOĽTE DOPRAVU">CHOOSE SHIPPING</key>
+		<key alias="ZDARMA">FREE</key>
+		<key alias="ZVOĽTE PLATBU">CHOOSE PAYMENT</key>
+		<key alias="KONTAKTNÉ INFORMÁCIE">CONTACT INFORMATION</key>
+		<key alias="CELKOM BEZ DPH">TOTAL EXCLUDING VAT</key>
+		<key alias="CELKOM S DPH">TOTAL INCLUDING VAT</key>
+		<key alias="CELKOM">TOTAL</key>
+		<key alias="SÚHLASÍM S">I AGREE WITH</key>
+		<key alias="OBCHODNÝMI PODMIENKAMI">TERMS AND CONDITIONS</key>
+		<key alias="A">AND</key>
+		<key alias="OCHRANOU OSOBNÝCH ÚDAJOV">PERSONAL DATA PROTECTION</key>
+		<key alias="POTVRDIŤ NÁKUP">CONFIRM PURCHASE</key>
+		<key alias="Váš košík je prázdny.">Your cart is empty.</key>
+	</area>
+	<area alias="App_Plugins/Quote/BasketDeliveryData">
+		<key alias="FIREMNÉ ÚDAJE">COMPANY INFORMATION</key>
+		<key alias="FAKTURAČNÁ ADRESA">BILLING ADDRESS</key>
+		<key alias="ADRESA DORUČENIA">SHIPPING ADDRESS</key>
+	</area>
+	<area alias="App_Plugins/Quote/BasketFinished">
+		<key alias="KOŠÍK">CART</key>
+		<key alias="Ďakujeme za váš nákup!">Thank you for your purchase!</key>
+		<key alias="POZRITE SI VAŠU OBJEDNÁVKU">VIEW YOUR ORDER</key>
+	</area>
+	<area alias="App_Plugins/Quote/QuoteDetail">
+		<key alias="OBJEDNÁVKA">ORDER</key>
+		<key alias="OBJEDNÁVKA ČÍSLO">ORDER NUMBER</key>
+		<key alias="ODOSLAŤ NA E-MAIL">SEND TO EMAIL</key>
+		<key alias="VYTLAČIŤ OBJEDNÁVKU">PRINT ORDER</key>
+		<key alias="VYTLAČIŤ FAKTÚRU">PRINT INVOICE</key>
+		<key alias="Faktúra ešte nie je k dispozícii">Invoice is not yet available</key>
+	</area>
+	<area alias="App_Plugins/Quote/QuoteSendNotification">
+		<key alias="OBJEDNÁVKA">ORDER</key>
+		<key alias="OBJEDNÁVKA ČÍSLO">ORDER NUMBER</key>
+		<key alias="E-mail s informáciami o stave objednávky bol úspešne odoslaný na adresu">An email with information about the order status has been successfully sent to the address</key>
+		<key alias="ZOBRAZIŤ OBJEDNÁVKU">VIEW ORDER</key>
+	</area>
+	<area alias="App_Plugins/Shared/Quote/QuoteDetailHeader">
+		<key alias="Objednávka číslo:">Order number:</key>
+		<key alias="Zo dňa:">Date:</key>
+		<key alias="Stav:">Status:</key>
+		<key alias="Zaplatiť">Pay</key>
+		<key alias="kartou">by card</key>
+		<key alias="Stav úhrady:">Payment status:</key>
+	</area>
+	<area alias="App_Plugins/Shared/Quote/QuoteDetail">
+		<key alias="Adresa pre doručenie:">Delivery address:</key>
+		<key alias="Fakturačná adresa:">Billing address:</key>
+		<key alias="Firemné údaje:">Company information:</key>
+		<key alias="Spôsob dodania:">Delivery method:</key>
+		<key alias="Platba:">Payment:</key>
+		<key alias="Poznámka:">Note:</key>
+		<key alias="PRODUKT">PRODUCT</key>
+		<key alias="KÓD">CODE</key>
+		<key alias="VEĽKOSŤ">SIZE</key>
+		<key alias="MNOŽSTVO">QUANTITY</key>
+		<key alias="CENA">PRICE</key>
+		<key alias="bez DPH">excluding VAT</key>
+		<key alias="s DPH">including VAT</key>
+		<key alias="SPOLU">TOTAL</key>
+		<key alias="CENA bez DPH">PRICE excluding VAT</key>
+		<key alias="CENA s DPH">PRICE including VAT</key>
+		<key alias="SPOLU bez DPH">TOTAL excluding VAT</key>
+		<key alias="SPOLU s DPH">TOTAL including VAT</key>
+	</area>
+	<area alias="App_Plugins/QuoteGateways/GoPayForm">
+		<key alias="PLATBA KARTOU">PAYMENT BY CARD</key>
+		<key alias="ONLINE PLATBA KARTOU">ONLINE PAYMENT BY CARD</key>
+		<key alias="Komunikácia s platobnou bránou zlyhala. Kontaktuje nás prosím.">Communication with the payment gateway failed. Please contact us.</key>
+		<key alias="Zaplatiť">Pay</key>
+		<key alias="Objednávka číslo:">Order number:</key>
+		<key alias="Suma na úhradu:">Total amount:</key>
+	</area>
+	<area alias="App_Plugins/QuoteGateways/GoPayResult">
+		<key alias="STAV PLATBY">PAYMENT STATUS</key>
+		<key alias="Komunikácia s platobnou bránou zlyhala. Kontaktuje nás prosím.">Communication with the payment gateway failed. Please contact us.</key>
+		<key alias="Požadovaná objednávka nebola nájdená.">The requested order was not found.</key>
+	</area>
+
+	<area alias="App_Plugins/Takfajn/Contact">
+		<key alias="Údaje označené">Marked fields</key>
+		<key alias="sú povinné.">are mandatory.</key>
+		<key alias="ODOSLAŤ SPRÁVU">SEND MESSAGE</key>
+	</area>
+
+	<area alias="Repositories/TakfajnCategoryRepository">
+		<key alias="Všetky produkty">All products</key>
+	</area>
+
+
+	<area alias="Models/CategoryPublicFilterModel_ProductSortDropDown">
+		<key alias="Od najnovšieho">From newest</key>
+		<key alias="Od A po Z">From A to Z</key>
+		<key alias="Od Z po A">From Z to A</key>
+		<key alias="Od najlacnejšieho">From cheapest</key>
+		<key alias="Od najdrahšieho">From most expensive</key>
+	</area>
+	<area alias="Models/TransportGateway">
+		<key alias="Doprava v SR">Shipping in Slovakia</key>
+		<key alias="Osobný odber">Personal pickup</key>
+		<key alias="Rozvozom">Delivery</key>
+		<key alias="Odberné miesto DHL">DHL Pickup Point</key>
+		<key alias="Odberné miesto SPS">SPS Pickup Point</key>
+		<key alias="Doprava mimo SR">Shipping outside Slovakia</key>
+		<key alias="Kuriérom DPD">DPD Courier</key>
+		<key alias="Poštou">By mail</key>
+		<key alias="Poštový kuriér">Postal courier</key>
+		<key alias="/Styles/images/doprava-dpd.jpg">/Styles/images/shipping-dpd.jpg</key>
+		<key alias="/Styles/images/doprava-posta.jpg">/Styles/images/shipping-post.jpg</key>
+		<key alias="/Styles/images/doprava-postovy-kurier.jpg">/Styles/images/shipping-postal-courier.jpg</key>
+	</area>
+	<area alias="Models/PaymentTypeModel">
+		<key alias="Platby uskutočnené prostredníctvom GOPAY nám budú pripísané na účet do pár minút po zaplatení.">Payments made via GOPAY will be credited to our account within a few minutes after payment.</key>
+		<key alias="GOPAY internetový platobný systém je najrýchlejšia forma ako môžete svoju objednávku zaplatiť. Tento spôsob platby je overený a bezpečný.">GOPAY internet payment system is the fastest way to pay for your order. This payment method is verified and secure.</key>
+		<key alias="Údaje o svojej platobnej karte zadávate priamo banke. Nikto z našich zamestnancov nemá prístup k údajom o Vašej platobnej karte.">You enter your payment card details directly with the bank. None of our employees have access to your payment card information.</key>
+		<key alias="V prípade, že sa pri platbe vyskytne chyba, prosím kontaktujte nás, radi Vám s tým pomôžeme.">If there is an error during payment, please contact us, and we will be happy to assist you.</key>
+	</area>
+	<area alias="Models/PaymentGateway">
+		<key alias="Žiadna platobná brána">No payment gateway</key>
+		<key alias="V hotovosti">In cash</key>
+		<key alias="Prevodom na účet">Bank transfer</key>
+		<key alias="Platba kartou cez GoPay">Payment by card via GoPay</key>
+		<key alias="Platba kartou cez GP webpay">Payment by card via GP webpay</key>
+		<key alias="Prevod cez platobnú bránu ČSOB">Transfer via ČSOB payment gateway</key>
+		<key alias="Prevod cez platobnú bránu TATRAPAY">Transfer via TATRAPAY payment gateway</key>
+		<key alias="Prevod cez platobnú bránu SPOROPAY">Transfer via SPOROPAY payment gateway</key>
+	</area>
+	<area alias="Models/QuoteModel">
+		<key alias="Zľava {0}%">Discount {0}%</key>
+		<key alias="{0}/notifikacia?id={1}">{0}/notification?id={1}</key>
+	</area>
+	<area alias="Models/User2QuoteModel">
+		<key alias="Chcem faktúrovať na firmu">I want to invoice to a company</key>
+		<key alias="Názov firmy">Company name</key>
+		<key alias="Meno a priezvisko">First name and last name</key>
+		<key alias="Meno a priezvisko musí byť zadané">First name and last name must be entered</key>
+		<key alias="Ulica a číslo domu">Street and house number</key>
+		<key alias="Ulica a číslo domu musí byť zadané">Street and house number must be entered</key>
+		<key alias="Obec">City</key>
+		<key alias="Obec musí byť zadaná">City must be entered</key>
+		<key alias="PSČ">ZIP code</key>
+		<key alias="PSČ musí byť zadané">ZIP code must be entered</key>
+		<key alias="Štát">Country</key>
+		<key alias="Štát musí byť zadaný">Country must be entered</key>
+		<key alias="Doručovacia adresa je iná ako fakturačná">Delivery address is different than billing address</key>
+		<key alias="E-mail">E-mail</key>
+		<key alias="E-mail musí byť zadaný">E-mail must be entered</key>
+		<key alias="Neplatná e-mailová adresa.">Invalid e-mail address.</key>
+		<key alias="Telefón">Phone</key>
+		<key alias="Telefón musí byť zadaný">Phone must be entered</key>
+		<key alias="Vaša poznámka">Your note</key>
+	</area>
+	<area alias="Models/QuoteNotifier">
+		<key alias="QuotePaymentCard_Sk">QuotePaymentCard_En</key>
+		<key alias="QuoteProductHeader_Sk">QuoteProductHeader_En</key>
+		<key alias="QuoteProductFooter_Sk">QuoteProductFooter_En</key>
+		<key alias="QuoteProductItem_Sk">QuoteProductItem_En</key>
+		<key alias="CENA CELKOM">TOTAL PRICE</key>
+		<key alias="QuoteInvoiceCompany_Sk">QuoteInvoiceCompany_En</key>
+		<key alias="QuoteDeliveryAddress_Sk">QuoteDeliveryAddress_En</key>
+		<key alias="ZAEVIDOVANÁ">RECORDED</key>
+		<key alias="QuoteStateNotification_Sk">QuoteStateNotification_En</key>
+		<key alias="Vaša TAKFAJN objednávka">Your TAKFAJN order</key>
+	</area>
+	<area alias="Models/ContactModel">
+		<key alias="Meno musí byť zadané">Name must be entered</key>
+		<key alias="Meno">Name</key>
+		<key alias="E-mail musí byť zadaný">E-mail must be entered</key>
+		<key alias="E-mail">E-mail</key>
+		<key alias="Telefón musí byť zadaný">Phone must be entered</key>
+		<key alias="Telefón">Phone</key>
+		<key alias="Vaša správa musí byť zadaná">Your message must be entered</key>
+		<key alias="Vaša správa">Your message</key>
+		<key alias="Heslo">Password</key>
+		<key alias="Heslo zopakované">Repeated password</key>
+	</area>
+	<area alias="Models/TakFajnGoPayRequestModel">
+		<key alias="https://www.takfajn.sk/kosik/platba-kartou/ok">https://www.takfajn.com/en/cart/payment-card/ok</key>
+		<key alias="https://www.takfajn.sk/kosik/platba-kartou/notifikacia">https://www.takfajn.com/en/cart/payment-card/notification</key>
+	</area>
+	<area alias="Models/TakFajnGoPayResultModel">
+		<key alias="Stav úhrady objednávky sa nepodarilo zistiť.">Failed to retrieve payment status of the order.</key>
+		<key alias="Objednávka je neuhradená.">Order is unpaid.</key>
+		<key alias="Objednávka je uhradená.">Order is paid.</key>
+	</area>
+	<area alias="Controllers/QuoteApiLangStr">
+		<key alias="Vznikla chyba pri pridávaní produktu do košíka. Skontrolujte prosím stav košíka.">An error occurred while adding the product to the cart. Please check the cart status.</key>
+		<key alias="Vznikla chyba pri ukladaní produktu do košíka.">An error occurred while saving the product to the cart.</key>
+		<key alias="Vznikla chyba pri odstraňovaní produktu z košíka.">An error occurred while removing the product from the cart.</key>
+		<key alias="Vznikla chyba pri čítaní obsahu košíka.">An error occurred while reading the cart content.</key>
+		<key alias="Vznikla chyba pri zmene stavu objednávky.">An error occurred while changing the order status.</key>
+	</area>
+	<area alias="Controllers/QuoteApiController">
+		<key alias="Zadané množstvo nie je možné pridať do košíka. Na sklade je k dispozícii {0} kusov.">The specified quantity cannot be added to the cart. {0} pieces are available in stock.</key>
+		<key alias="K DOPRAVE ZADARMO VÁM CHÝBA {0}">You are missing {0} for FREE SHIPPING</key>
+		<key alias="DOPRAVU MÁTE ZADARMO">You have FREE SHIPPING</key>
+		<key alias="Zadaný zľavový kupón nie je možné uplatniť.">The entered discount coupon cannot be applied.</key>
+		<key alias="Vznikla chyba pri odoberaní zľavy z košíka. {0}">An error occurred while removing the discount from the cart. {0}</key>
+	</area>
+	<area alias="Controllers/QuoteController">
+		<key alias="Názov firmy musí byť zadaný">The company name must be entered.</key>
+		<key alias="IČO musí byť zadané">The ID number must be entered.</key>
+		<key alias="DIČ musí byť zadané">The VAT number must be entered.</key>
+		<key alias="Meno a priezvisko pre adresu doručenia musí byť zadané">The first name and last name for the delivery address must be entered.</key>
+		<key alias="Ulica a číslo domu pre adresu doručenia musí byť zadané">The street and house number for the delivery address must be entered.</key>
+		<key alias="PSČ pre adresu doručenia musí byť zadané">The ZIP code for the delivery address must be entered.</key>
+		<key alias="Obec pre adresu doručenia musí byť zadaná">The city for the delivery address must be entered.</key>
+		<key alias="Štát pre adresu doručenia musí byť zadaný">The country for the delivery address must be entered.</key>
+		<key alias="Musíte zaškrtnúť súhlas s obchodnými podmienkami a ochranou osobných údajov">You must check the consent to the terms and conditions and personal data protection.</key>
+		<key alias="Nastala chyba pri zápise záznamu do systému. Skúste akciu zopakovať a ak sa chyba vyskytne znovu, kontaktujte nás prosím.">An error occurred while writing the record to the system. Please try the action again, and if the error persists, contact us.</key>
+	</area>
+	<area alias="Controllers/ContactController">
+		<key alias="Musíte označiť, že nie ste robot.">You must indicate that you are not a robot.</key>
+		<key alias="Vaša správa pre Takfajn">Your message for Takfajn</key>
+		<key alias="ContactRequestOk_Sk">ContactRequestOk_En</key>
+		<key alias="Správu sa nepodarilo odoslať. Skúste akciu zopakovať a pokiaľ chyba stále pretrváva, kontaktujte nás prosím.">The message could not be sent. Please try the action again, and if the error persists, contact us.</key>
+	</area>
+
+
+	<area alias="Tasks/QuoteToPdf">
+		<key alias="Objednávka číslo:">Order number:</key>
+		<key alias="Zo dňa:">Date:</key>
+		<key alias="Strana">Page</key>
+		<key alias="Takfajn.sk - dizajn http://www.tomashrabec.cz, programovanie http://www.dufeksoft.com">Takfajn.com - design by http://www.tomashrabec.cz, programming by http://www.dufeksoft.com</key>
+		<key alias="Dodávateľ">Supplier</key>
+		<key alias="IČO: {0}">ID: {0}</key>
+		<key alias="DIČ: {0}">VAT: {0}</key>
+		<key alias="IČ DPH: {0}">VAT ID: {0}</key>
+		<key alias="E-mail: {0}">Email: {0}</key>
+		<key alias="Telefón: {0}">Phone: {0}</key>
+		<key alias="Variabilný symbol: {0}">Variable symbol: {0}</key>
+		<key alias="IBAN: {0}">IBAN: {0}</key>
+		<key alias="Banka: {0}">Bank: {0}</key>
+		<key alias="Odberateľ:">Customer:</key>
+		<key alias="Adresa doručenia je iná ako fakturačná:">Delivery address is different from billing address:</key>
+		<key alias="Poznámka">Note</key>
+		<key alias="SPOLU BEZ DPH:">TOTAL EXCL. VAT:</key>
+		<key alias="SPOLU S DPH:">TOTAL INCL. VAT:</key>
+		<key alias="Položka">Item</key>
+		<key alias="Kód / veľkosť">Code / Size</key>
+		<key alias="Celkom s DPH">Total incl. VAT</key>
+		<key alias="Celkom bez DPH">Total excl. VAT</key>
+		<key alias="Množstvo">Quantity</key>
+		<key alias="Cena s DPH">Price incl. VAT</key>
+		<key alias="Cena bez DPH">Price excl. VAT</key>
+	</area>
+	<area alias="Tasks/InvoiceToPdf">
+		<key alias="Faktúra číslo:">Invoice number:</key>
+		<key alias="Objednávka číslo:">Order number:</key>
+		<key alias="Strana">Page</key>
+		<key alias="Takfajn.sk - dizajn http://www.tomashrabec.cz, programovanie http://www.dufeksoft.com">Takfajn.cz - design http://www.tomashrabec.cz, programming http://www.dufeksoft.com</key>
+		<key alias="Dodávateľ">Supplier</key>
+		<key alias="IČO: {0}">Company ID: {0}</key>
+		<key alias="DIČ: {0}">VAT ID: {0}</key>
+		<key alias="IČ DPH: {0}">VAT Reg. No.: {0}</key>
+		<key alias="E-mail: {0}">Email: {0}</key>
+		<key alias="Telefón: {0}">Phone: {0}</key>
+		<key alias="Variabilný symbol: {0}">Variable symbol: {0}</key>
+		<key alias="IBAN: {0}">IBAN: {0}</key>
+		<key alias="Banka: {0}">Bank: {0}</key>
+		<key alias="Dátum vystavenia">Issue date</key>
+		<key alias="Dátum dodania">Delivery date</key>
+		<key alias="Dátum splatnosti">Due date</key>
+		<key alias="Odberateľ:">Customer:</key>
+		<key alias="Adresa doručenia je iná ako fakturačná:">Delivery address is different from billing address:</key>
+		<key alias="Poznámka">Note</key>
+		<key alias="SPOLU BEZ DPH:">TOTAL EXCL. VAT:</key>
+		<key alias="SPOLU DPH:">TOTAL VAT:</key>
+		<key alias="SPOLU S DPH:">TOTAL INCL. VAT:</key>
+		<key alias="SPOLU:">TOTAL:</key>
+		<key alias="NEUHRÁDZAJTE! UŽ UHRADENÉ!">DO NOT PAY! ALREADY PAID!</key>
+		<key alias="Toto je daňový doklad k vybavenej objednávke.">This is a tax document for a processed order.</key>
+		<key alias="Týmto potvrdzujeme, že vaša objednávka je v plnej výške uhradená.">We hereby confirm that your order has been fully paid.</key>
+		<key alias="Položka">Item</key>
+		<key alias="Kód / veľkosť">Code / size</key>
+		<key alias="Celkom s DPH">Total incl. VAT</key>
+		<key alias="Celkom bez DPH">Total excl. VAT</key>
+		<key alias="Množstvo">Quantity</key>
+		<key alias="Cena s DPH">Price incl. VAT</key>
+		<key alias="DPH %">VAT %</key>
+		<key alias="Cena bez DPH">Price excl. VAT</key>
+		<key alias="Celkom">Total</key>
+		<key alias="Cena">Price</key>
+	</area>
+	<area alias="Util/TakfajnMailer">
+		<key alias="EmailOne_Sk">EmailOne_Cz</key>
+	</area>
+</language>

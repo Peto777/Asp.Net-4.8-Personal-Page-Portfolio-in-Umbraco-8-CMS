@@ -1,0 +1,51 @@
+﻿@model PeterGlozikUmbracoOsobnaStranka.lib.Models.RegisterModel
+@using PeterGlozikUmbracoOsobnaStranka.lib.Controllers
+@using PeterGlozikUmbracoOsobnaStranka.lib.Util
+
+<div class="register-form">
+    @using (Html.BeginUmbracoForm<PeterGlozikUmbracoOsobnaStranka.lib.Controllers.MemberController>("SubmitRegistration", null, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="umbracoosobnastranka-form">
+            <div class="form-item">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = CurrentLang.GetText("Views/Register", "Prihlasovacie meno") })
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+
+            <div class="form-item">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = CurrentLang.GetText("Views/Register", "E-mail") })
+                @Html.ValidationMessageFor(m => m.Email)
+            </div>
+
+            <div class="form-item">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = CurrentLang.GetText("Views/Register", "Heslo") })
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+
+            <div class="form-item">
+                @Html.LabelFor(m => m.PasswordRepeat)
+                @Html.PasswordFor(m => m.PasswordRepeat, new { @class = "form-control", placeholder = CurrentLang.GetText("Views/Register", "Zopakovať heslo") })
+                @Html.ValidationMessageFor(m => m.PasswordRepeat)
+            </div>
+            <div class="api-password-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control",  })
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>
+            <div class="api-password-group">
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+            </div>
+
+            @Html.ValidationSummary(true)
+            <div class="form-section">
+                <a href="#" onclick="document.getElementById('submitButton').click(); return false;" class="btn btn-primary btn-lg">@CurrentLang.GetText("Views/Register", "Registrovať sa")</a>
+                <input type="submit" id="submitButton" class="hidden" />
+            </div>
+        </div>
+    }
+</div>

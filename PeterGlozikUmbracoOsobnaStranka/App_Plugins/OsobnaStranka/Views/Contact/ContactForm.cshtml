@@ -1,0 +1,58 @@
+﻿@model PeterGlozikUmbracoOsobnaStranka.lib.Models.OsobnaStrankaContactModel
+@using PeterGlozikUmbracoOsobnaStranka.lib.Util
+
+
+@if (TempData["success"] != null)
+{
+    <p class="big">@CurrentLang.GetText("Views/ContactForm", "Ďakujeme za správu.")</p>
+    <p class="medium">@CurrentLang.GetText("Views/ContactForm", "Správa bola úspešne odoslaná.")<br />@CurrentLang.GetText("Views/ContactForm", "Ozveme sa čoskoro.")</p>
+}
+else
+{
+    <h3>@CurrentLang.GetText("Views/ContactForm", "Napíšte nám správu")</h3>
+    using (Html.BeginUmbracoForm<PeterGlozikUmbracoOsobnaStranka.lib.Controllers.ContactController>("HandleFormSubmit", null, new { @class = "form-horizontal", role = "form" }))
+    {
+        <div class="osobnastranka-form">
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.ValidationSummary(true, CurrentLang.GetText("Views/ContactForm", "Správu sa nepodarilo odoslať. Opravte chyby a skúste správu odoslať znovu."))
+                    @Html.AntiForgeryToken()
+                    <div class="form-item">
+                        @Html.LabelFor(x => x.Name)
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Name)
+                    </div>
+                    <div class="form-item">
+                        @Html.LabelFor(x => x.Email)
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                    <div class="form-item">
+                        @Html.LabelFor(x => x.Telefon)
+                        @Html.TextBoxFor(m => m.Telefon, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Telefon)
+                    </div>
+                    <div class="form-item">
+                        @Html.LabelFor(x => x.Text)
+                        @Html.TextAreaFor(m => m.Text, new { @class = "form-control", style = "height:150px" })
+                        @Html.ValidationMessageFor(m => m.Text)
+                    </div>
+                    <div class="api-password-group">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </div>
+                    <div class="api-password-group">
+                        @Html.LabelFor(m => m.ConfirmPassword)
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                    </div>
+                </div>
+            </div>
+            <div class="form-section">
+                <a href="#" onclick="document.getElementById('submitButton').click(); return false;" class="tlacitko">@CurrentLang.GetText("Views/ContactForm", "Odoslať správu")</a>
+                <input type="submit" id="submitButton" class="hidden" />
+            </div>
+        </div>
+    }
+}

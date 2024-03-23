@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<language alias="en" intName="English" localName="English" culture="en-US">
+	<area alias="Controllers/ContactController">
+	<key alias="Musíte označiť, že nie ste robot.">You must indicate that you are not a robot.</key>
+	</area>
+	<area alias="Member/ContactController">
+		<key alias="Neplatné meno alebo heslo.">Invalid username or password.</key>
+		<key alias="Užívateľ nenájdený.">User not found.</key>
+	</area>
+
+	<area alias="Views/ContactForm">
+		<key alias="Správu sa nepodarilo odoslať. Opravte chyby a skúste správu odoslať znovu.">The message could not be sent. Correct the errors and try sending the message again.</key>
+		<key alias="Odoslať správu">Send a message</key>
+		<key alias="Napíšte nám správu">Write us a message</key>
+		<key alias="Ďakujeme za správu.">Thanks for the message.</key>
+		<key alias="Správa bola úspešne odoslaná.">Message was succesfully sent.</key>
+		<key alias="Ozveme sa čoskoro.">We will be in touch soon.</key>
+	</area>
+	<area alias="Models/OsobnaStrankaContactModel">
+		<key alias="Priezvisko a meno musí byť zadané">Surname and first name must be entered</key>
+		<key alias="Priezvisko a meno">Last name and First name</key>
+		<key alias="Email">Email</key>
+		<key alias="Neplatný email">Invalid email</key>
+		<key alias="E-mail musí byť zadaný">Email must be entered</key>
+		<key alias="Telefón">Phone</key>
+		<key alias="Text správy">Messenger text</key>
+		<key alias="Text správy musí byť zadaný">Message text must be entered</key>
+	</area>
+	<area alias="Models/LoginModel">
+		<key alias="Prihlasovacie meno musí byť zadané">Surname and first name must be entered</key>
+		<key alias="Heslo musí byť zadané">Password must be entered</key>
+		<key alias="Prihlasovacie meno">Username</key>
+		<key alias="Heslo">Login</key>
+		<key alias="Váš e-mail">Your e-mail</key>
+		<key alias="E-mail musí byť zadaný">Email must be entered</key>
+		<key alias="Neplatný formát e-mailu">Invalid email format</key>
+    </area>
+	<area alias="Views/Login">
+		<key alias="Registrácia">Registration</key>
+		<key alias="Zabudnuté heslo?">Forgotten password ?</key>
+		<key alias="Prihlásiť">Log in</key>
+		<key alias="Váš e-mail">Your e-mail</key>
+		<key alias="Vaše heslo">Your password</key>
+		<key alias="ODHLÁSIŤ">LOG OUT</key>
+		<key alias="Obnoviť prístup">Restore access</key>
+		<key alias="~/sk/nova-registracia">~/en/new-registration</key>
+		<key alias="~/sk/clenska-sekcia-zabudnute-heslo">~/en/member-section-forgotten-password/</key>
+		<key alias="~/sk/clenska-sekcia/prihlasenie">~/en/member-section/</key>
+	</area>
+	<area alias="Models/RegisterModel">
+		<key alias="Prihlasovacie meno">Username</key>
+		<key alias="Prihlasovacie meno musí byť zadané">Surname and first name must be entered</key>
+		<key alias="Email">Email</key>
+		<key alias="Email je povinný.">Email is mandatory</key>
+		<key alias="Heslo">Login</key>
+		<key alias="Heslo je povinné.">Password is required.</key>
+		<key alias="Opakujte heslo">Repeat the password</key>
+		<key alias="Potvrdenie hesla je povinné.">Password confirmation is mandatory.</key>
+	</area>
+	<area alias="Views/Register">
+		<key alias="Registrovať sa">To register</key>
+		<key alias="Prihlasovacie meno">Ussername</key>
+		<key alias="E-mail">E-mail</key>
+		<key alias="Heslo">Password</key>
+		<key alias="Zopakovať heslo">Repeat password</key>
+	</area>
+	<area alias="Models/ChangePasswordModel">
+		<key alias="Staré heslo">Old password</key>
+		<key alias="Staré heslo musí byť zadané">The old password must be entered</key>
+		<key alias="Nové heslo">New password</key>
+		<key alias="Nové heslo musí byť zadané">A new password must be entered</key>
+		<key alias="Zopakované nové heslo">Repeated new password</key>
+		<key alias="Zopakované nové heslo musí byť zadané">A repeated new password must be entered</key>
+	</area>
+	<area alias="Views/ChangePassword">
+		<key alias="Staré heslo">Old password</key>
+		<key alias="Nové heslo">New password</key>
+		<key alias="Zopakovať nové heslo">Repeat the new password</key>
+		<key alias="Zmeniť heslo">Change Password</key>
+	</area>
+	
+</language>
