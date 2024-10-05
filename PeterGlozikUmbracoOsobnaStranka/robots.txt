@@ -1,3 +1,3 @@
-Sitemap: https://www.gloziksoft.sk/sk/sitemap
+Sitemap: https://os.gloziksoft.sk/sk/sitemap
 User-agent: *
 Disallow:

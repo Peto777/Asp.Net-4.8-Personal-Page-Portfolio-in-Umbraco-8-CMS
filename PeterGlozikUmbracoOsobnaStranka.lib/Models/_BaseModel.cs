@@ -225,14 +225,14 @@ namespace PeterGlozikUmbracoOsobnaStranka.lib.Models
         {
         }
 
-        public _EshopModel GetCurrentEshopModel()
-        {
-            //if (!this.TempData.ContainsKey(_EshopModel.TemDataKey))
-            //{
-            //    this.TempData[_EshopModel.TemDataKey] = new _EshopModel() { CurrentProductCategory = null };
-            //}
+        //public _EshopModel GetCurrentEshopModel()
+        //{
+        //    if (!this.TempData.ContainsKey(_EshopModel.TemDataKey))
+        //    {
+        //        //this.TempData[_EshopModel.TemDataKey] = new _EshopModel() { CurrentProductCategory = null };
+        //    }
 
-            return (_EshopModel)this.TempData[_EshopModel.TemDataKey];
-        }
+        //    return (_EshopModel)this.TempData[_EshopModel.TemDataKey];
+        //}
     }
 }

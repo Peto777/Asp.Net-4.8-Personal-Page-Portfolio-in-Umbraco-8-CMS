@@ -1,31 +1,32 @@
 ﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
 @using PeterGlozikUmbracoOsobnaStranka.lib.Models
 @using PeterGlozikUmbracoOsobnaStranka.lib.Controllers
+@using PeterGlozikUmbracoOsobnaStranka.lib.Util
 
 @{
     VzdelanieModel vzdelanieModel = new VzdelanieModel();
     vzdelanieModel.ZakladnaSkola = "Hriňová";
     vzdelanieModel.StrednaSkola = "Detva";
-    vzdelanieModel.VysokaSkola = "Žiadna";
+    vzdelanieModel.VysokaSkola = "-";
 }
 
 <div class="telo">
-    <h1>VZDELANIE</h1>
+    <h1>@CurrentLang.GetText("Views/Education", "VZDELANIE")</h1>
     <div class="row">
         <div class="col-md-4">
-            <h2>Základná škola</h2>
+            <h2>@CurrentLang.GetText("Views/Education", "Základná škola")</h2>
             <p>@vzdelanieModel.ZakladnaSkola</p>
         </div>
         <div class="col-md-4">
-            <h2>Stredná škola</h2>
+            <h2>@CurrentLang.GetText("Views/Education", "Stredná škola")</h2>
             <p>@vzdelanieModel.StrednaSkola</p>
         </div>
         <div class="col-md-4">
-            <h2>Vysoká škola</h2>
+            <h2>@CurrentLang.GetText("Views/Education", "Vysoká škola")</h2>
             <p>@vzdelanieModel.VysokaSkola</p>
         </div>
     </div>
-    <h2>Kurzy a certifikáty</h2>
+    <h2>@CurrentLang.GetText("Views/Education", "Kurzy a certifikáty")</h2>
     <div class="row">
         @foreach (string nazovKurzu in vzdelanieModel.ZoznamKurzov.zoznamKurzov)
         {

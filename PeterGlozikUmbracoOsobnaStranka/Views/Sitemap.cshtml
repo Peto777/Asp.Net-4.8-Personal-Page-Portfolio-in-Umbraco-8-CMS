@@ -6,7 +6,7 @@
     Layout = null;
     var home = Model.Root();
     string protokol = new PeterGlozikUmbracoOsobnaStranka.lib.Controllers._BaseControllerUtil().CurrentRequest.Url.Scheme;
-    string prefix = string.Format("{0}://www.gloziksoft.sk", protokol);
+    string prefix = string.Format("{0}://os.gloziksoft.sk", protokol);
     List<string> urls = GenerateUrls(prefix, home);
 }
 

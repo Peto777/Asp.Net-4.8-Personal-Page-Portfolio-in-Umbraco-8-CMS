@@ -12,5 +12,16 @@
         @Html.Partial("Layout/_Cookies")
         @Html.Partial("Layout/_HtmlScripts")
     </div>
+    <!-- Chatbot HTML štruktúra -->
+    <div id="chatbot">
+        <button id="closeButton" onclick="toggleChatbot()">X</button>
+        <div id="chatlog"></div>
+        <div>
+            <input type="text" id="userInput" placeholder="Napíšte správu..." onkeydown="if(event.key === 'Enter') sendMessage()">
+            <button id="sendButton" onclick="sendMessage()">Odoslať</button>
+        </div>
+    </div>
+
+    <button id="openButton" onclick="toggleChatbot()"><i class="fas fa-comments"></i></button>
 </body>
 </html>

@@ -44,8 +44,8 @@
 		<key alias="ODHLÁSIŤ">LOG OUT</key>
 		<key alias="Obnoviť prístup">Restore access</key>
 		<key alias="~/sk/nova-registracia">~/en/new-registration</key>
-		<key alias="~/sk/clenska-sekcia-zabudnute-heslo">~/en/member-section-forgotten-password/</key>
-		<key alias="~/sk/clenska-sekcia/prihlasenie">~/en/member-section/</key>
+		<key alias="~/sk/clenska-sekcia-zabudnute-heslo">~/en/member-section-forgotten-password</key>
+		<key alias="~/sk/clenska-sekcia/prihlasenie">~/en/member-section</key>
 	</area>
 	<area alias="Models/RegisterModel">
 		<key alias="Prihlasovacie meno">Username</key>
@@ -78,5 +78,24 @@
 		<key alias="Zopakovať nové heslo">Repeat the new password</key>
 		<key alias="Zmeniť heslo">Change Password</key>
 	</area>
-	
+	<area alias="Views/Education">
+		<key alias="VZDELANIE">EDUCATION</key>
+		<key alias="Základná škola">Elementary School</key>
+		<key alias="Stredná škola">High school</key>
+		<key alias="Vysoká škola">College School</key>
+		<key alias="Kurzy a certifikáty">Courses and certificates</key>
+	</area>
+	<area alias="Models/EducationModel">
+		<key alias="Kurz HTML">Course HTML</key>
+		<key alias="Kurz CSS">Course CSS</key>
+		<key alias="Kurz MVC">Course MVC</key>
+		<key alias="Kurz Bootstrap">Course Bootstrap</key>
+		<key alias="Kurz C#">Course C#</key>
+		<key alias="Kurz Umbraco">Course Umbraco</key>
+		<key alias="Kurz SQL">Course SQL</key>
+		<key alias="Kurz JavaScript">Course JavaScript</key>
+	</area>
+
+
+
 </language>

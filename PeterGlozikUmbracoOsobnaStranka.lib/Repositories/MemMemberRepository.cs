@@ -300,26 +300,6 @@ namespace PeterGlozikUmbracoOsobnaStranka.lib.Repositories
                 IsLockedOut = member.IsLockedOut,
             };
         }
-        public static OsobnaStrankaMember CreateNewCustomerMember(string email)
-        {
-            OsobnaStrankaMember trg = new OsobnaStrankaMember();
-            trg.MemberId = 0;
-            trg.Name = email;
-            trg.Username = email;
-            trg.Email = email;
-            trg.IsApproved = true;
-            trg.IsLockedOut = false;
-            trg.IsCustomerUser = true;
-
-            DateTime dt = DateTime.Now;
-            string pswd = dt.Ticks.ToString();
-
-            trg.Password = pswd;
-            trg.PasswordRepeat = pswd;
-
-            return trg;
-        }
-
         public static int GetCurrentMemberId()
         {
             MembershipUser user = GetCurrentUser();

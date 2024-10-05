@@ -78,13 +78,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ContactController.cs" />
-    <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\DashboardBlog\BlogPostController.cs" />
+    <Compile Include="Controllers\DashboardBlog\CountryController.cs" />
+    <Compile Include="Controllers\DashboardBlog\CustomerDataController.cs" />
+    <Compile Include="Controllers\DashboardBlog\MemberController.cs" />
     <Compile Include="Controllers\OsobnaStrankaApiController.cs" />
     <Compile Include="Controllers\_BaseApiController.cs" />
     <Compile Include="Controllers\_BaseController.cs" />
     <Compile Include="Models\Blog.cs" />
+    <Compile Include="Models\DashboardBlog\CKEditorModel.cs" />
+    <Compile Include="Models\DashboardBlog\CountryModel.cs" />
+    <Compile Include="Models\DashboardBlog\CustomerModel.cs" />
+    <Compile Include="Models\DashboardBlog\CustomerRegisterModel.cs" />
+    <Compile Include="Models\DashboardBlog\MemberBlogModel.cs" />
     <Compile Include="Models\Kurzy.cs" />
-    <Compile Include="Models\MemberModel.cs" />
+    <Compile Include="Models\DashboardBlog\MemberModel.cs" />
     <Compile Include="Models\OsobnaStrankaContactModel.cs" />
     <Compile Include="Models\UmbracoCmsContent\ClenOsobnejStranky.generated.cs" />
     <Compile Include="Models\UmbracoCmsContent\CmsContent.generated.cs" />
@@ -100,13 +108,17 @@
     <Compile Include="Models\_BaseModel.cs" />
     <Compile Include="PeterGlozikUmbracoOsobnaStrankaApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BlogPostRepository.cs" />
+    <Compile Include="Repositories\CountryRepository.cs" />
     <Compile Include="Repositories\MemMemberRepository.cs" />
+    <Compile Include="Repositories\OsobnaStrankaCustomerRepository.cs" />
     <Compile Include="Repositories\OsobnaStrankaUserPropRepository.cs" />
     <Compile Include="Repositories\UmbracoCmsContent\TextRepository.cs" />
     <Compile Include="Repositories\UmbracoCmsContent\_BaseRepository.cs" />
     <Compile Include="Repositories\_BaseRepository.cs" />
     <Compile Include="Util\ConfigurationUtil.cs" />
     <Compile Include="Util\OsobnaStrankaMailer.cs" />
+    <Compile Include="Util\PriceUtil.cs" />
     <Compile Include="Util\TraslanteUtil.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -121,6 +133,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Repositories\_dbOsobnaStranka.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

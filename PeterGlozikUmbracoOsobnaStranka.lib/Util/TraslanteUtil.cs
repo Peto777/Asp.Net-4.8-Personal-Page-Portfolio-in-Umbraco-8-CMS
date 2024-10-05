@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
@@ -117,8 +118,8 @@ namespace PeterGlozikUmbracoOsobnaStranka.lib.Util
 
     public class TranslateLangCollection
     {
-        Hashtable htAlias = new Hashtable();
-        Hashtable htCulture = new Hashtable();
+        private readonly Dictionary<string, TranslateLang> htAlias = new Dictionary<string, TranslateLang>();
+        private readonly Dictionary<string, TranslateLang> htCulture = new Dictionary<string, TranslateLang>();
 
         public void Clear()
         {
@@ -137,15 +138,14 @@ namespace PeterGlozikUmbracoOsobnaStranka.lib.Util
             return lang;
         }
 
-
         public TranslateLang GetForAlias(string alias)
         {
-            return htAlias.ContainsKey(alias) ? (TranslateLang)htAlias[alias] : null;
+            return htAlias.TryGetValue(alias, out var lang) ? lang : null;
         }
 
         public TranslateLang GetForCulture(string culture)
         {
-            return htCulture.ContainsKey(culture) ? (TranslateLang)htCulture[culture] : null;
+            return htCulture.TryGetValue(culture, out var lang) ? lang : null;
         }
     }
 
@@ -156,12 +156,12 @@ namespace PeterGlozikUmbracoOsobnaStranka.lib.Util
         public string LocalName { get; private set; }
         public string Culture { get; private set; }
 
-        Hashtable htAreas = new Hashtable();
+        private readonly Hashtable htAreas = new Hashtable(); // Marked as readonly
 
         public TranslateLang(string alias, string intName, string localName, string culture)
         {
             this.Alias = alias;
-            this.IntName = IntName;
+            this.IntName = intName; // Use intName correctly
             this.LocalName = localName;
             this.Culture = culture;
         }
@@ -180,27 +180,28 @@ namespace PeterGlozikUmbracoOsobnaStranka.lib.Util
         }
     }
 
-    public class TranslateArea
-    {
-        public string Alias { get; private set; }
-
-        Hashtable htItems = new Hashtable();
-
-        public TranslateArea(string alias)
+        public class TranslateArea
         {
-            this.Alias = alias;
+            public string Alias { get; private set; }
+
+            private readonly Hashtable htItems = new Hashtable(); // Marked as readonly
+
+            public TranslateArea(string alias)
+            {
+                this.Alias = alias;
+            }
+
+            public void AddItem(string alias, string text)
+            {
+                htItems.Add(alias, text);
+            }
+
+            public string GetItem(string alias)
+            {
+                return htItems.ContainsKey(alias) ? (string)htItems[alias] : null;
+            }
         }
 
-        public void AddItem(string alias, string text)
-        {
-            htItems.Add(alias, text);
-        }
-
-        public string GetItem(string alias)
-        {
-            return htItems.ContainsKey(alias) ? (string)htItems[alias] : null;
-        }
-    }
 
     public class CurrentLang
     {

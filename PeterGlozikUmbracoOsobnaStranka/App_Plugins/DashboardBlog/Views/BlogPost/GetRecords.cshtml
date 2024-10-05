@@ -1,0 +1,47 @@
+﻿@using PeterGlozikUmbracoOsobnaStranka.lib.Models.DashboardBlog
+@model BlogPagingListModel
+
+@{
+    string urlInsert = Url.Content("~/sk/clenska-sekcia/public-blog/pridat-prispevok");
+    string urlUpdate = Url.Content("~/sk/clenska-sekcia/public-blog/upravit-prispevok");
+    string urlDelete = Url.Content("~/sk/clenska-sekcia/public-blog/odstranit-prispevok");
+}
+
+<h1>Blog Posts</h1>
+@Html.Action("GetFilter", "BlogPost", new { area = "DashboardBlog" })
+@{
+    var grid = new WebGrid(null, rowsPerPage: Model.ItemsPerPage, defaultSort: "BlogName");
+    grid.Bind(Model.Items, rowCount: Model.TotalItems, autoSortAndPage: false);
+    @grid.GetHtml(
+                    htmlAttributes: new { @id = "bloglist" },
+                    mode: WebGridPagerModes.All,
+                    tableStyle: "webgrid",
+                    headerStyle: "",
+                    footerStyle: "paging",
+                    alternatingRowStyle: "",
+                    columns: grid.Columns(
+                        grid.Column("", "", format: a =>
+                            Html.Raw(
+                            "<span class='tools'>" +
+                            "<a href='" + string.Format("{0}?id={1}", urlUpdate, a.pk.ToString()) + "' title='Upraviť príspevok' class='nowrap'><i class='fa fa-edit'></i></a>"
+                            + "&#160;&#160;" +
+                            "<a href='" + string.Format("{0}?id={1}", urlDelete, a.pk.ToString()) + "' title='Odstrániť príspevok' class='nowrap'><i class='fa fa-trash'></i></a>"
+                            + "</span>")),
+                        grid.Column("BlogName", "Author", canSort: true),
+                        grid.Column("BlogWeb", "Web", canSort: true),
+                        grid.Column("BlogDescription", "Popis", canSort: true, format: a => Html.Raw(a.BlogDescription)),
+                        grid.Column("BlogImage", "Image", canSort: false, format: a =>
+                        !string.IsNullOrEmpty(a.BlogImagePath)
+                            ? Html.Raw("<img src='" + Url.Content(a.BlogImagePath) + "' alt='Blog Image'width=100%/>")
+                            : Html.Raw("No Image"))
+              ));
+
+    <script type="text/javascript">
+        $(function () {
+            $('#bloglist thead tr th:first').html(
+                "<a href='" + '@urlInsert' + "' class='btn btn-default' title='Pridať príspevok'>Pridať</a>"
+            );
+        });
+    </script>
+
+}

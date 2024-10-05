@@ -93,10 +93,13 @@ Umbraco.Core.Migrations.Upgrade.V_8_0_0.DataTypes.PreValueMigratorComposer, Umbr
 Umbraco.Core.Logging.Viewer.LogViewerComposer, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Services.Implement.KeyValueService+InitializeMigration, Umbraco.Core, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 PeterGlozikUmbracoOsobnaStranka.lib.Controllers.ContactController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-PeterGlozikUmbracoOsobnaStranka.lib.Controllers.MemberController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 PeterGlozikUmbracoOsobnaStranka.lib.Controllers.OsobnaStrankaApiController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 PeterGlozikUmbracoOsobnaStranka.lib.Controllers._BaseApiController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 PeterGlozikUmbracoOsobnaStranka.lib.Controllers._BaseController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.BlogPostController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.CountryController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.CustomerDataController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.MemberController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -383,8 +386,11 @@ Umbraco.Web.PropertyEditors.ValueConverters.RteMacroRenderingValueConverter, Umb
 Umbraco.Web.Mvc.PluginController
 
 PeterGlozikUmbracoOsobnaStranka.lib.Controllers.ContactController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-PeterGlozikUmbracoOsobnaStranka.lib.Controllers.MemberController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 PeterGlozikUmbracoOsobnaStranka.lib.Controllers._BaseController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.BlogPostController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.CountryController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.CustomerDataController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.MemberController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
@@ -475,8 +481,11 @@ Umbraco.ModelsBuilder.Embedded.BackOffice.ModelsBuilderDashboardController, Umbr
 Umbraco.Web.Mvc.SurfaceController
 
 PeterGlozikUmbracoOsobnaStranka.lib.Controllers.ContactController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-PeterGlozikUmbracoOsobnaStranka.lib.Controllers.MemberController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 PeterGlozikUmbracoOsobnaStranka.lib.Controllers._BaseController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.BlogPostController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.CountryController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.CustomerDataController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.MemberController, PeterGlozikUmbracoOsobnaStranka.lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbProfileController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbLoginStatusController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Controllers.UmbRegisterController, Umbraco.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=null

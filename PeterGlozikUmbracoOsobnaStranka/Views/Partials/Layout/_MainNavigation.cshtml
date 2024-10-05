@@ -16,17 +16,11 @@
             continue;
         }
 
-        bool naviHide = childPage.HasValue("umbracoNaviHide") && (bool)childPage.Value("umbracoNaviHide");
-        if (!naviHide)
+        if (childPage.HasValue("umbracoNaviHide") && !(bool)childPage.Value("umbracoNaviHide"))
         {
-            string childUrl = childPage.Url();
-            string menuTitle = childPage.HasValue("menuTitle") ? childPage.Value("menuTitle").ToString() : string.Empty;
-
-            if (!string.IsNullOrWhiteSpace(childUrl) && !string.IsNullOrWhiteSpace(menuTitle))
-            {
-                <li><a href="@childUrl">@menuTitle</a></li>
-            }
+            <li><a href="@childPage.Url()">@childPage.Value("menuTitle")</a></li>
         }
+
     }
     <li class="navbar-divider"></li>
     <li><a href="/sk">SK</a></li>

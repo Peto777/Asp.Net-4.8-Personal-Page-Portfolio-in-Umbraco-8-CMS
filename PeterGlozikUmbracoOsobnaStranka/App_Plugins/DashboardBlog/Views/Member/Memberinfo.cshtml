@@ -1,0 +1,58 @@
+﻿@inherits _OsobnaStrankaViewPage
+@using PeterGlozikUmbracoOsobnaStranka.lib.Models
+@using PeterGlozikUmbracoOsobnaStranka.lib.Repositories
+@using PeterGlozikUmbracoOsobnaStranka.lib.Util
+
+@{
+    MembershipUser user = Umbraco.MemberIsLoggedOn() ? System.Web.Security.Membership.GetUser() : null;
+    bool addSeparator = false;
+}
+
+@if (user != null)
+{
+    <div class="protected-menubar">
+        <nav class="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-protected" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <i id="menuIconProtect" class="menu-icon fa fa-bars"></i>
+            </button>
+            <div class="title">@user.UserName</div>
+        </nav>
+
+        <div id="navbar-protected" class="collapse navbar-collapse">
+            <div class="menu">
+                @if (System.Web.Security.Roles.IsUserInRole(user.UserName, OsobnaStrankaMemberRepository.OsobnaStrankaMemberAdminRole))
+                {
+                    <ul class="admin-menu">
+                        <li><a href="@Url.Content("~/umbraco")">Správa obsahu</a></li>
+                        <li><a href="@Url.Content("~/sk/clenska-sekcia/public-blog")">Správa príspevkov</a></li>
+                        <li><a href="@Url.Content("~/sk/clenska-sekcia/krajiny")">Krajiny</a></li>
+                    </ul>
+
+                    addSeparator = true;
+                }
+
+                @if (System.Web.Security.Roles.IsUserInRole(user.UserName, OsobnaStrankaMemberRepository.OsobnaStrankaMemberCustomerRole))
+                {
+                    if (addSeparator)
+                    {
+                        <div class="separator"></div>
+                    }
+
+            <ul class="customer-menu">
+                <li><a href="@Url.Content("~/sk/clenska-sekcia/zmena-hesla")">Zmena hesla</a></li>
+                <li><a href="@Url.Content("~/sk/clenska-sekcia/moje-osobne-udaje")">Moje osobné údaje</a></li>
+            </ul>
+                }
+            </div>
+
+            @using (Html.BeginUmbracoForm<PeterGlozikUmbracoOsobnaStranka.lib.Controllers.DashboardBlog.MemberController>("SubmitLogout", null, new { @class = "form-horizontal", role = "form" }))
+            {
+                <div class="logout-btn">
+                    <a href="@Url.Action("Logout", "Member", new { area = "DashboardBlog" })" class="btn btn-primary btn-lg">@CurrentLang.GetText("Views/Login", "ODHLÁSIŤ")</a>
+                    <input type="submit" id="submitProtectedLogoutButton" class="hidden" />
+                </div>
+            }
+        </div>
+    </div>
+}

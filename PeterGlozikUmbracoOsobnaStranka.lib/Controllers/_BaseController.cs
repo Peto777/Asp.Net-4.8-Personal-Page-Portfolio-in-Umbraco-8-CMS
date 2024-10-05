@@ -14,6 +14,21 @@ namespace PeterGlozikUmbracoOsobnaStranka.lib.Controllers
             }
         }
 
+        public string CurrentSessionId
+        {
+            get
+            {
+                return HttpContext.Session.SessionID;
+            }
+        }
+        public HttpRequest CurrentRequest
+        {
+            get
+            {
+                return new _BaseControllerUtil().CurrentRequest;
+            }
+        }
+
         protected RedirectToUmbracoPageResult RedirectToOsobnaStrankaUmbracoPage(string pageKey)
         {
             return this.RedirectToUmbracoPage(GetPageId(pageKey));
